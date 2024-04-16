@@ -22,7 +22,7 @@ class Ui_MainWindow(object):
     maxLengthOfList = 30
     def setupUi(self, MainWindow):
         self.mainWindow = MainWindow
-        MainWindow.setObjectName("Lab_1 Коломойцев, Болдырев, Нуриев")
+        MainWindow.setObjectName("Lab_2 Тютюнов, Лукьяненко, Букин")
         MainWindow.resize(412, 483)
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)#Главный виджет
         self.centralwidget.setObjectName("centralwidget")
@@ -253,7 +253,7 @@ class Ui_MainWindow(object):
         MainWindow.setTabOrder(scrollArea2, self.Calculate_Button)
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Lab_2 Коломойцев, Болдырев, Нуриев"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Lab_2 Тютюнов, Лукьяненко, Букин"))
 
         self.Function_ComboBox.setItemText(0, _translate("MainWindow", "Задача №1"))
         self.Function_ComboBox.setItemText(1, _translate("MainWindow", "Задача №3"))

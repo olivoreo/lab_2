@@ -67,7 +67,7 @@ def task1_lab2(A):
             return -1
     return round((A[0] + A[3] - (A[0] * A[3])) * A[2] * (A[1] + A[4] - (A[1] * A[4])), roundParam)
 def totalProbability (H, A):
-    if (len(H)!=len(A) and sum(H) != 1):
+    if (len(H)!=len(A) or sum(H) != 1):
         return -1
     value = 0
     for i in range(len(H)):
@@ -112,6 +112,8 @@ def Task2_Lab2(n,m1,m2):
     if n < 0 or m1 < 0 or m2 < 0 :
         return -1
     res = ""
+    res += "\nP(A1) = " + str(MProbability_Task2_Lab2(n, m1))
+    res += "\nP(A2) = " + str(MProbability_Task2_Lab2(n, m2))
     res += "\na) " + str(Task2_1_Lab2(n, m1, m2))
     res += "\nb) " + str(Task2_2_Lab2(n, m1, m2))
     res += "\nc) " + str(Task2_3_Lab2(n, m1, m2))
