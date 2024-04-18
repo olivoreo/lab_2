@@ -37,12 +37,13 @@ def permutationsWithRep(mList):
     return int(value)
 
 def task1_lab2(A):
-    if (len(A) != 5):
-        return -1
+    if (len(A) != 6):
+        return "Введены не все данные!"
     for val in A:
         if (not checkProbability(val)):
-            return -1
-    return round((A[0] + A[3] - (A[0] * A[3])) * A[2] * (A[1] + A[4] - (A[1] * A[4])), roundParam)
+            return "Вероятности должны быть в интервале [0,1]"
+    return round((1-A[2]) * (1-A[0]) * ((1-A[1]) + (1-A[3]) * (1-A[4]) * (1-A[5]) - (1-A[1]) * (1-A[3]) * (1-A[4]) * (1-A[5])), roundParam)
+
 def totalProbability (H, A):
     if (len(H)!=len(A) or sum(H) != 1):
         return -1
@@ -52,7 +53,7 @@ def totalProbability (H, A):
     return round(value, roundParam)
 def formulaBayes (H, A, I):
     if (len(H) != len(A) != len(I) or sum (H) != 1):
-        return -1
+        return "Введены не все данные!"
     res = dict()
     totalProb = totalProbability(H,A)
     for i in range(len(I)):

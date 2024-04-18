@@ -12,7 +12,7 @@ def paramList():
 def initializationParam0():
     param = UiParam()
     param.list1.lableText = "Вероятности эллементов:"
-    param.list1.nameElement = "P(A%d)"
+    param.list1.nameElement = "q%d"
     param.list1.validatorTypeElementList = TypeValidator.probaility
     param.list1.constNumElements = True
     param.list1.startIndex = 1
@@ -24,8 +24,8 @@ def initializationParam0():
     param.pictureTask.extension = "png"
     param.pictureTask.width = 600
 
-    param.pictureResult.name = "Task 1 Result"
-    param.pictureResult.extension = "jpg"
+    param.pictureResult.name = "Task 2_Formula"
+    param.pictureResult.extension = "png"
 
     param.function = lambda values: probabilityFunctions.task1_lab2(values.list1)
     return param

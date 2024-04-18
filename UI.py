@@ -222,12 +222,9 @@ class Ui_MainWindow(object):
                 values.list3 = self.checkBoxListClass.getList()
             res = param.function(values)
             print(str(res))
-            if type(res) is not str and res < 0 :
-                text = "Некорректный ввод!"
-            else:
-                text = "Результат: "+str(res)
+            text = "Результат: "+str(res)
         except:
-            text = "Невозможно посчитать значение"
+            text = "Введены не все данные"
         self.Result_Label.setText(text)
     def lineEditListener(self, currentFunctionIndex, numLineEdit, number):
         # проверка на диапазон
