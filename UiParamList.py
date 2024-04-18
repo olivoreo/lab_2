@@ -16,12 +16,12 @@ def initializationParam0():
     param.list1.validatorTypeElementList = TypeValidator.probaility
     param.list1.constNumElements = True
     param.list1.startIndex = 1
-    param.list1.numElements = 5
+    param.list1.numElements = 6
     param.list1.visibility = True
     param.list1.needValues = True
 
     param.pictureTask.name = "Task 1"
-    param.pictureTask.extension = "jpg"
+    param.pictureTask.extension = "png"
     param.pictureTask.width = 600
 
     param.pictureResult.name = "Task 1 Result"
@@ -47,6 +47,10 @@ def initializationParam1():
     param.line3.validatorType = TypeValidator.natural
     param.line3.visibility = True
     param.line3.needValue = True
+
+    param.pictureTask.name = "Task 2"
+    param.pictureTask.extension = "png"
+    param.pictureTask.width = 600
 
     param.function = lambda values: probabilityFunctions.Task2_Lab2(values.num1, values.num2, values.num3)
     return param

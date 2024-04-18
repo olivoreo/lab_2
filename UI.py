@@ -259,6 +259,7 @@ class Ui_MainWindow(object):
         self.Function_ComboBox.setItemText(1, _translate("MainWindow", "Задача №3"))
         self.Function_ComboBox.setItemText(2, _translate("MainWindow", "Формула полной вероятности"))
         self.Function_ComboBox.setItemText(3, _translate("MainWindow", "Формула Байеса"))
+        self.Function_ComboBox.setItemText(4, _translate("MainWindow", "Задача №2"))
 
         self.Input_Label1.setText(_translate("MainWindow", "Input_Label1"))
         self.Input_Label2.setText(_translate("MainWindow", "Input_Label2"))
