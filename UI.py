@@ -224,7 +224,7 @@ class Ui_MainWindow(object):
             print(str(res))
             text = "Результат: "+str(res)
         except:
-            text = "Введены не все данные"
+            text = "Внезапная ошибка!"
         self.Result_Label.setText(text)
     def lineEditListener(self, currentFunctionIndex, numLineEdit, number):
         # проверка на диапазон

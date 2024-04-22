@@ -33,26 +33,23 @@ def initializationParam0():
 def initializationParam1():
     param = UiParam()
 
-    param.line1.lableText = "n:"
-    param.line1.validatorType = TypeValidator.natural
-    param.line1.visibility = True
-    param.line1.needValue = True
-
-    param.line2.lableText = "m1:"
-    param.line2.validatorType = TypeValidator.natural
-    param.line2.visibility = True
-    param.line2.needValue = True
-
-    param.line3.lableText = "m2:"
-    param.line3.validatorType = TypeValidator.natural
-    param.line3.visibility = True
-    param.line3.needValue = True
+    param.list1.lableText = "Вероятности попадания стрелков:"
+    param.list1.nameElement = "p%d"
+    param.list1.validatorTypeElementList = TypeValidator.probaility
+    param.list1.constNumElements = True
+    param.list1.startIndex = 1
+    param.list1.numElements = 5
+    param.list1.visibility = True
+    param.list1.needValues = True
 
     param.pictureTask.name = "Task 2"
     param.pictureTask.extension = "png"
     param.pictureTask.width = 600
 
-    param.function = lambda values: probabilityFunctions.Task2_Lab2(values.num1, values.num2, values.num3)
+    param.pictureResult.name = "Task2_Solution"
+    param.pictureResult.extension = "png"
+
+    param.function = lambda values: probabilityFunctions.Task2_Lab2(values.list1)
     return param
 
 def initializationParam2():
